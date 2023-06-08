@@ -22,3 +22,32 @@ const cards = [
         value: 72
     }
 ]
+
+//O(n)
+function objectSort(arr) {
+  let obj = {};
+  arr.forEach((card) => {
+    if (obj[card.value]) {
+      obj[card.value].push(card);
+    } else {
+      obj[card.value] = [card];
+    }
+  });
+  return obj;
+}
+
+//O(n)
+function objectSortMap(arr) {
+  let map = new Map();
+  arr.forEach((card) => {
+    if (map.has(card.value)) {
+      map.get(card.value).push(card);
+    } else {
+      map.set(card.value, [card]);
+    }
+  });
+  return Object.fromEntries(map.entries());
+}
+
+console.log(objectSort(cards), "OBJECT VERSION");
+console.log(objectSortMap(cards), "MAP VERSION");

@@ -5,6 +5,7 @@
 // ~must RETURN the new array.
 const list = ["item1", "item2", "item3"];
 
+//O(n)
 function reverseArray(arr){
     const newArray =[];
 
