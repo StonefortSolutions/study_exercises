@@ -2,6 +2,14 @@
 
 //if you are able to do the above, create an additional function that allows you to take a hexcode and make it more green (not pure green)
 
+/**
+ * Converts a hex code to an RGB value
+ * @param {string} hex hex code
+ * @param? {number} red modifier
+ * @param? {number} green modifier
+ * @param? {number} blue modifier
+ * @returns {string} rgb value
+ */
 const hexToRGB = (hex, red, green, blue) => {
   let r = parseInt(hex.slice(1, 3), 16);
   let g = parseInt(hex.slice(3, 5), 16);
@@ -19,10 +27,21 @@ const hexToRGB = (hex, red, green, blue) => {
   return `rgb(${r}, ${g}, ${b})`;
 };
 
+/**
+ * Converts a hex code to an RGB value and increases the green value by a specified amount
+ * @param {string} hex hex code
+ * @param {number} amount amount to increase green by
+ * @returns {string} rgb value
+ */
 const hexToGreen = (hex, amount) => {
   return hexToRGB(hex, 0, amount, 0);
 };
 
+/**
+ * Converts an RGB value to a hex code
+ * @param {string} rgb rgb value
+ * @returns {string} hex code
+ */
 const rgbToHex = (rgb) => {
   let hex = "#";
   const rgbArr = rgb.slice(4, rgb.length - 1).split(", ");
