@@ -7,7 +7,7 @@
 //if an odd number of items in the initial array, have one pair that is a trio
 // example output: [1,2,3,4,5] => [[1,3],[2,5,4]]
 
-//O(n) time complexity
+//O(n) time complexity?
 
 
 /**
