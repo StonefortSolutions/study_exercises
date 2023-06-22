@@ -20,12 +20,12 @@ function createPairs(arr) {
             newArray[newArray.length - 1].push(sortedArr[i]);
             break;
         }
-        newArray.push(sortedArr[i + 1] ? [sortedArr[i], sortedArr[i + 1]] : [sortedArr[i]]);
+        newArray.push([sortedArr[i], sortedArr[i + 1]]);
     }
     return newArray;
 }
 
 const items = [1, 2, 3, 3, 4, 5, 6, 7];
-const oddItems = [1, 2, 3, 4, 5, 6, 7];
+const oddItems = [1, 2, 3, 3, 4, 5, 6, 7, 8];
 console.log(createPairs(items))
 console.log(createPairs(oddItems))
