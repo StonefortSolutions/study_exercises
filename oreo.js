@@ -21,8 +21,8 @@ function createPairs(arr) {
     //for loop to iterate through the array, and push pairs into the new array
     //increment by 2 to get pairs
     for (let i = 0; i < sortedArr.length; i += 2) {
-        //if the array is odd, push the last item into the last pair
-        //break out of the loop to skip the last push to newArray
+        //if we are the last index in the array and if the array is odd, push the last item into the last pair
+        //break out of the loop
         if (i + 1 === sortedArr.length && sortedArr.length % 2 !== 0) {
             newArray[newArray.length - 1].push(sortedArr[i]);
             break;
