@@ -17,6 +17,7 @@
  */
 function createPairs(arr) {
     const newArray = [];
+    //Sort the array by giving it a random number between -0.5 and 0.5
     const sortedArr = arr.sort(() => Math.random() - 0.5);
     //for loop to iterate through the array, and push pairs into the new array
     //increment by 2 to get pairs
