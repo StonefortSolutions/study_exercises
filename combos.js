@@ -16,8 +16,9 @@ const combos = (arr, num) => {
             return;
         }
 
-        //For each item in the array, generate combinations with that item as the first item in the combo
+        //For each item in the array, starting at the start index
         for (let i = start; i < arr.length; i++) {
+            //Generate combinations with a new array of the currentCombo plus the current item, and the start index of the current item + 1 (next item)
             generateCombinations([...currentCombo, arr[i]], i + 1);
         }
     };
@@ -53,7 +54,7 @@ const combos2 = (arr, num) => {
             //Otherwise, pop the stack and increment the index
             index = stack.pop() + 1;
         } else {
-        //Otherwise, push the index onto the stack and increment the index
+            //Otherwise, push the index onto the stack and increment the index
             stack.push(index);
             index++;
         }
