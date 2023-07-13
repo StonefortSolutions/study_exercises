@@ -19,6 +19,7 @@ form.addEventListener("submit", (event) => {
     console.log(event)
     const input = document.getElementById("name")
     const name = input.value
+    if(name === "") return
     list.push({name})
     input.value = ""
     displayList()
