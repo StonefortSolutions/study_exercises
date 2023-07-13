@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This Is It</title>
+    <style>
+        #name {
+            width: 200px;
+            height: 30px;
+            border: 1px solid black;
+            margin-bottom: 1.5rem;
+            background-color: lightgrey;
+         
+        }
+        #displayList {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            overflow: scroll;
+            margin-right: 1rem;
+            border-radius: 5px 5px 5px 5px;
+            overflow: hidden;
+        }
+        #item {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px 5px 5px 5px;
+
+        }
+        #displayList div{
+            border-bottom: 1px solid black;
+            padding: 0.5rem;
+        }
+        #displayList div:hover {
+            cursor: pointer;
+            background-color: lightgrey;
+        }
+
+        #flexrow {
+            display: flex;
+            flex-direction: row;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: slategrey;
+        }
+        #submit {
+            width: 200px;
+            height: 30px;
+            border: 1px solid black;
+            margin-bottom: 1.5rem;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<form id="form">
+    <input placeholder="name" id="name" type="text"/>
+    <input type="submit" id="submit" value="SUBMIT">
+</form>
+<div id="flexrow">
+<div id="displayList">
+No items in list
+</div>
+
+<div id="item">
+    No item to show
+</div>
+
+</div>
+
+<script src="thisisit.js"></script>
+</body>
+</html>
